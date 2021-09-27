@@ -33,9 +33,8 @@ public class UnitTestCases {
 		s.setName("Rahul");
 		s.setCity("Chennai");
 		
-		assertEquals(s.getSno(),1);
-		assertEquals(s.getName(),"Rahul");
-		assertEquals(s.getCity(),"Chennai");
+		
+
 	}
 	@Test
 	@DisplayName("Check Unset Values")
@@ -44,5 +43,15 @@ public class UnitTestCases {
 		assertEquals(s.getSno(),0);
 		assertNull(s.getName());
 		assertNull(s.getCity());
+	}
+	
+	@Test
+	@DisplayName("Overloaded Constructor must be there")
+	public void constructorTest() {
+		Student s=new Student(12,"Rahul","Chennai");
+		assertNotNull(s);
+		assertEquals(s.getSno(),12);
+		assertEquals(s.getName(),"Rahul");
+		assertEquals(s.getCity(),"Chennai");
 	}
 }

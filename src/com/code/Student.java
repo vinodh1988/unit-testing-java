@@ -4,6 +4,14 @@ public class Student {
  private  int sno;
  private  String name;
  private  String city; //instance variables
+ public Student() {
+	 
+ }
+ public Student(int sno,String name,String city) {
+	 this.sno=sno;
+	 this.name=name;
+	 this.city=city;
+ }
 
   void display() {
 	  System.out.println("sno:"+sno+" name "+name+" city "
@@ -34,7 +42,7 @@ public void setCity(String city) {
 	this.city = city;
 }
   
-  
+ 
 }
 
 /*
