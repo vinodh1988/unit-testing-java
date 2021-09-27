@@ -1,6 +1,7 @@
 package com.test;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;
@@ -21,5 +22,27 @@ public class UnitTestCases {
 	@DisplayName("Should Create objects")
 	public void createInstance() {
 		assertNotNull(new Student());
+	}
+	
+	@Test
+	@DisplayName("Value Setters and Getters")
+	public void testSettersAndGetterS()
+	{
+		Student s=new Student();
+		s.setSno(1);
+		s.setName("Rahul");
+		s.setCity("Chennai");
+		
+		assertEquals(s.getSno(),1);
+		assertEquals(s.getName(),"Rahul");
+		assertEquals(s.getCity(),"Chennai");
+	}
+	@Test
+	@DisplayName("Check Unset Values")
+	public void testUnsetValues() {
+		Student s=new Student();
+		assertEquals(s.getSno(),0);
+		assertNull(s.getName());
+		assertNull(s.getCity());
 	}
 }
