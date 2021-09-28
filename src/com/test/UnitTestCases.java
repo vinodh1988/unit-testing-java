@@ -6,9 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.suite.api.SuiteDisplayName;
+import org.junit.runners.Suite.SuiteClasses;
 
 import com.code.Student;
-
 
 public class UnitTestCases {
 	@Test
