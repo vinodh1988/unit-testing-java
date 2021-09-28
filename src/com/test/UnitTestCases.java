@@ -55,4 +55,5 @@ public class UnitTestCases {
 		assertEquals(s.getName(),"Rahul");
 		assertEquals(s.getCity(),"Chennai");
 	}
+	
 }
